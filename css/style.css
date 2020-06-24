@@ -1074,6 +1074,7 @@ h6 {
   position: relative;
   min-width: 150px;
   max-width: 270px;
+  list-style: none;
 }
 
 .screen-gallery__img-container:not(:last-child) {
@@ -1102,6 +1103,18 @@ h6 {
   -o-transition: transform 0.7s;
   transition: transform 0.7s;
   transition: transform 0.7s, -webkit-transform 0.7s;
+}
+
+.white-popup {
+  position: relative;
+  background: transparent;
+  padding: 25px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.white-popup img {
+  width: 100%;
 }
 
 .screen-warranty {
