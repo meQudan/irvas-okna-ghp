@@ -169,6 +169,11 @@ h6 {
   border-radius: 10px;
   border: 2px solid #55a831;
   background-color: #fff;
+  color: #55a831;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 10px;
 }
 
 .header__call-measurer-img {
@@ -177,10 +182,6 @@ h6 {
 }
 
 .header__call-measurer-text {
-  color: #55a831;
-  font-size: 14px;
-  font-weight: 700;
-  text-align: left;
   margin-left: 10px;
 }
 
@@ -555,6 +556,9 @@ h6 {
   -webkit-transition: color 0.7s;
   -o-transition: color 0.7s;
   transition: color 0.7s;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
 }
 
 .glazing-item:hover {
@@ -568,12 +572,6 @@ h6 {
   max-width: 100px;
   width: 100%;
   margin-bottom: 30px;
-}
-
-.glazing-item__text {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 26px;
 }
 
 .cold-warm {
