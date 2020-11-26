@@ -17,75 +17,112 @@ testWebP(function (support) {
 });
 ; // modals
 
-var modal__measurment = document.querySelector(".modal__measurment");
-var modal__measurmentClose = document.querySelector(".modal__measurment-close");
-var modal__callback = document.querySelector(".modal__callback");
-var modal__callbackClose = document.querySelector(".modal__callback-close");
-var modal__costCalc = document.querySelector(".modal__cost-calc");
-var modal__costCalcClose = document.querySelector(".modal__cost-calc-close"); // buttons
+var modal__measurment = document.querySelector('.modal__measurment');
+var modal__measurmentClose = document.querySelector('.modal__measurment-close');
+var modal__callback = document.querySelector('.modal__callback');
+var modal__callbackClose = document.querySelector('.modal__callback-close');
+var modal__costCalc = document.querySelector('.modal__cost-calc');
+var modal__costCalcClose = document.querySelector('.modal__cost-calc-close'); // buttons
 
-var header__callMeasurer = document.querySelector(".header__call-measurer");
-var header__telCallback = document.querySelector(".header__tel-callback");
-var screenQuastions__btn = document.querySelector(".screen-quastions__btn");
-var coldBtn1 = document.querySelector(".coldBtn1");
-var warmBtn1 = document.querySelector(".warmBtn1");
-var coldBtn2 = document.querySelector(".coldBtn2");
-var warmBtn2 = document.querySelector(".warmBtn2");
-var coldBtn3 = document.querySelector(".coldBtn3");
-var warmBtn3 = document.querySelector(".warmBtn3");
-var coldBtn4 = document.querySelector(".coldBtn4");
-var warmBtn4 = document.querySelector(".warmBtn4");
-var coldBtn5 = document.querySelector(".coldBtn5");
-var warmBtn5 = document.querySelector(".warmBtn5"); // functions close
+var header__callMeasurer = document.querySelector('.header__call-measurer');
+var header__telCallback = document.querySelector('.header__tel-callback');
+var screenQuastions__btn = document.querySelector('.screen-quastions__btn');
+var coldBtn1 = document.querySelector('.coldBtn1');
+var warmBtn1 = document.querySelector('.warmBtn1');
+var coldBtn2 = document.querySelector('.coldBtn2');
+var warmBtn2 = document.querySelector('.warmBtn2');
+var coldBtn3 = document.querySelector('.coldBtn3');
+var warmBtn3 = document.querySelector('.warmBtn3');
+var coldBtn4 = document.querySelector('.coldBtn4');
+var warmBtn4 = document.querySelector('.warmBtn4');
+var coldBtn5 = document.querySelector('.coldBtn5');
+var warmBtn5 = document.querySelector('.warmBtn5');
 
-modal__measurmentClose.addEventListener("click", function (event) {
-  modal__measurment.classList.remove("modal__is-open");
+function allowScroll() {
+  var oldClientWidth = document.documentElement.clientWidth;
+  document.body.style.overflow = '';
+  var newClientWidth = document.documentElement.clientWidth;
+  changePadding(oldClientWidth, newClientWidth);
+}
+
+function preventScroll() {
+  var oldClientWidth = document.documentElement.clientWidth;
+  document.body.style.overflow = 'hidden';
+  var newClientWidth = document.documentElement.clientWidth;
+  changePadding(oldClientWidth, newClientWidth);
+}
+
+function changePadding(oldCW, newCW) {
+  if (oldCW !== newCW) {
+    var newPadding = (parseInt(document.body.style.paddingRight) || 0) + newCW - oldCW;
+    document.body.style.paddingRight = newPadding + 'px';
+  }
+}
+
+modal__measurmentClose.addEventListener('click', function (event) {
+  allowScroll();
+  modal__measurment.classList.remove('modal__is-open');
 });
-modal__callbackClose.addEventListener("click", function (event) {
-  modal__callback.classList.remove("modal__is-open");
+modal__callbackClose.addEventListener('click', function (event) {
+  allowScroll();
+  modal__callback.classList.remove('modal__is-open');
 });
-modal__costCalcClose.addEventListener("click", function (event) {
-  modal__costCalc.classList.remove("modal__is-open");
+modal__costCalcClose.addEventListener('click', function (event) {
+  allowScroll();
+  modal__costCalc.classList.remove('modal__is-open');
 }); // events
 
-header__callMeasurer.addEventListener("click", function (event) {
-  modal__measurment.classList.add("modal__is-open");
+header__callMeasurer.addEventListener('click', function (event) {
+  preventScroll();
+  modal__measurment.classList.add('modal__is-open');
 });
-header__telCallback.addEventListener("click", function (event) {
-  modal__callback.classList.add("modal__is-open");
+header__telCallback.addEventListener('click', function (event) {
+  preventScroll();
+  modal__callback.classList.add('modal__is-open');
 });
-screenQuastions__btn.addEventListener("click", function (event) {
-  modal__callback.classList.add("modal__is-open");
+screenQuastions__btn.addEventListener('click', function (event) {
+  preventScroll();
+  modal__callback.classList.add('modal__is-open');
 });
-coldBtn1.addEventListener("click", function (event) {
-  modal__costCalc.classList.add("modal__is-open");
+coldBtn1.addEventListener('click', function (event) {
+  preventScroll();
+  modal__costCalc.classList.add('modal__is-open');
 });
-warmBtn1.addEventListener("click", function (event) {
-  modal__costCalc.classList.add("modal__is-open");
+warmBtn1.addEventListener('click', function (event) {
+  preventScroll();
+  modal__costCalc.classList.add('modal__is-open');
 });
-coldBtn2.addEventListener("click", function (event) {
-  modal__costCalc.classList.add("modal__is-open");
+coldBtn2.addEventListener('click', function (event) {
+  preventScroll();
+  modal__costCalc.classList.add('modal__is-open');
 });
-warmBtn2.addEventListener("click", function (event) {
-  modal__costCalc.classList.add("modal__is-open");
+warmBtn2.addEventListener('click', function (event) {
+  preventScroll();
+  modal__costCalc.classList.add('modal__is-open');
 });
-coldBtn3.addEventListener("click", function (event) {
-  modal__costCalc.classList.add("modal__is-open");
+coldBtn3.addEventListener('click', function (event) {
+  preventScroll();
+  modal__costCalc.classList.add('modal__is-open');
 });
-warmBtn3.addEventListener("click", function (event) {
-  modal__costCalc.classList.add("modal__is-open");
+warmBtn3.addEventListener('click', function (event) {
+  preventScroll();
+  modal__costCalc.classList.add('modal__is-open');
 });
-coldBtn4.addEventListener("click", function (event) {
-  modal__costCalc.classList.add("modal__is-open");
+coldBtn4.addEventListener('click', function (event) {
+  preventScroll();
+  modal__costCalc.classList.add('modal__is-open');
 });
-warmBtn4.addEventListener("click", function (event) {
-  modal__costCalc.classList.add("modal__is-open");
+warmBtn4.addEventListener('click', function (event) {
+  preventScroll();
+  modal__costCalc.classList.add('modal__is-open');
 });
-coldBtn5.addEventListener("click", function (event) {
-  modal__costCalc.classList.add("modal__is-open");
+coldBtn5.addEventListener('click', function (event) {
+  preventScroll();
+  modal__costCalc.classList.add('modal__is-open');
 });
-warmBtn5.addEventListener("click", function (event) {
-  modal__costCalc.classList.add("modal__is-open");
+warmBtn5.addEventListener('click', function (event) {
+  preventScroll();
+  modal__costCalc.classList.add('modal__is-open');
 });
 ;
 window.addEventListener("DOMContentLoaded", function () {
